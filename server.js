@@ -5,10 +5,8 @@ const roomsRoutes = require("./routes/rooms");
 
 const app = express();
 
-// Connect to MongoDB
 connectDB();
 
-// Middleware
 app.use(express.json());
 
 // Routes

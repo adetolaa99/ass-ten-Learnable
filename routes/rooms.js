@@ -3,7 +3,7 @@ const router = express.Router();
 const Room = require('../models/room');
 const RoomType = require('../models/room_type');
 
-// POST /api/v1/rooms
+// POST
 router.post('/', async (req, res) => {
  const { name, roomType, price } = req.body;
 
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
  }
 });
 
-// GET /api/v1/rooms
+// GET
 router.get('/', async (req, res) => {
  const { search, roomType, minPrice, maxPrice } = req.query;
 
@@ -44,7 +44,7 @@ router.get('/', async (req, res) => {
  }
 });
 
-// PATCH /api/v1/rooms/:roomId
+// PATCH
 router.patch('/:roomId', async (req, res) => {
  const { roomId } = req.params;
  const updates = Object.keys(req.body);
@@ -68,7 +68,7 @@ router.patch('/:roomId', async (req, res) => {
  }
 });
 
-// DELETE /api/v1/rooms/:roomId
+// DELETE
 router.delete('/:roomId', async (req, res) => {
  const { roomId } = req.params;
 
@@ -85,7 +85,7 @@ router.delete('/:roomId', async (req, res) => {
  }
 });
 
-// GET /api/v1/rooms/:roomId
+// GET
 router.get('/:roomId', async (req, res) => {
  const { roomId } = req.params;
 

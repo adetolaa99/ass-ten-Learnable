@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const RoomType = require('../models/room_type');
 
-// POST /api/v1/rooms-types
+// POST
 router.post('/', async (req, res) => {
  const newRoomType = new RoomType({
     name: req.body.name,
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
  }
 });
 
-// GET /api/v1/rooms-types
+// GET
 router.get('/', async (req, res) => {
  try {
     const roomTypes = await RoomType.find();
